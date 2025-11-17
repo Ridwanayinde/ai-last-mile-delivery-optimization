@@ -1,182 +1,85 @@
-# 📦 Data-Driven Last-Mile Delivery Optimization for E-Commerce SMEs in Nigeria
+# 🚀 Data-Driven Last-Mile Logistics Optimization for Small Businesses in Emerging Markets
 
-## 📘 Project Overview
-
-E-commerce in Nigeria is growing rapidly, but small and medium-sized enterprises (SMEs) still
-face major challenges with last-mile delivery. Platforms like **Chowdeck, Bolt Food,** and **Uber Eats**
-help businesses fulfill orders, yet **traffic delays, rider shortages, unpredictable demand, and**
-**inefficient dispatching** continue to cause long delivery times — especially for SMEs that lack
-data-driven tools.
-
-This project builds a **machine learning–powered system** that analyzes delivery patterns, predicts
-delays, estimates delivery time (ETA), and recommends smarter dispatching decisions. The goal is
-to give SMEs **the same data intelligence used by large logistics companies**, but in a simple,
-lightweight, and affordable form.
-
----
-
-## 🎯 Objectives
-
-1. **Collect and engineer delivery data**
-
-   (orders, locations, timestamps, rider assignments).
-
-2. **Perform exploratory data analysis (EDA)**
-
-   to uncover delivery delays, traffic hotspots, and demand patterns.
-
-3. **Build predictive machine learning models** to:
-
-    - estimate delivery time (ETA)
-
-    - classify orders at risk of delays
-
-    - recommend optimal rider assignments
-
-4. **Evaluate model performance** and measure how predictions can reduce delivery inefficiencies,
-    using Mean Absolute Error(MAE), Root Mean Square Error (RMSE), accuracy and confusion matrices.
-
-5. **Provide actionable insights for SMEs** relying on third-party delivery platforms.
-
-🌍**Why This Project Matters**
-
-- Most SMEs do not collect or analyze delivery data, so they cannot detect inefficiencies.
-- Unpredictable rider availability and heavy traffic cause long delays and cancellations.
-- A lightweight ML system helps SMEs:
-  - reduce delivery times
-  - improve customer satisfaction
-  - minimize cancelled orders
-  - anticipate rider delays
-  - plan for peak demand.
-  - track performance over time
+## 📌  Overview
   
-This project empowers SMEs to make data-driven decisions while continuing to use existing platforms
-like Chowdeck, Bolt Food, Uber Eats, and Jumia Food.
+This project explores how data engineering, predictive analytics, and intelligent dispatching
+can dramatically improve last-mile delivery performance for small and medium-sized businesses
+(SMEs) operating in emerging markets.
 
-## 🗂️ Data Source
+Using synthetic data, machine learning models, and algorithmic rider assignment, the system
+demonstrates how technology can help reduce delivery delays, optimise routing decisions, and
+improve customer experience in challenging logistics environments.
 
-Because real delivery data is not publicly available, this project
-uses synthetic but realistic datasets based on:
+This project is developed as part of the MIT Emerging Talent Program, Milestone 1–5.
 
-    - order timestamps
-    - customer GPS coordinates
-    - rider movement patterns
-    - platform-based delivery flows
-    - traffic behaviours and congestion points.
-  
-  Data is generated using:
-  
-    - Python, pandas,Numpy
-    - Faker library
-    - OpenStreetMap (OSM) for geospatial mapping
-    - custom simulation logic for rider behaviour and traffic
+## 🧩 Motivation
 
-## 🔧 Methodology
+During my undergraduate years, I founded Tomori Foods, a small food business serving customers in
+Akure, Ondo State.
 
-1. **Data Engineering & Preprocessing**
-   - Clean raw logs
-   - Validate missing timestamps and GPS values
-   - Map GPS coordinates using OpenStreetMap(OSM)
-   - Feature engineering::
-     - trip distance
-     - time of day
-     - demand clusters
-     - weather (optional)
-     - platform-type
-     - rider availability
-  
-2. **Exploratory Data Analysis**
-   - Heatmaps of delivery hotspots
-   - Distribution of delivery delays
-   - Rider availability patterns
-   - Comparison of order peaks across SMEs
+Our biggest challenge was not the food — it was logistics.
 
-3. **Predictive Modelling**
+Every day we dealt with:
 
-   Models used include:
-   - Linear Regression (baseline)
-   - Random Forest Regressor
-   - Gradient Boosting / XGBoost
+- Rider shortages
 
-  Tasks:
+- Late deliveries
 
-     - Predict estimated delivery time (ETA)
-     - Classify orders at risk of high delay
-     - Recommend efficient rider assignments
+- Traffic uncertainties
 
-1. Model Evaluation
+- Drivers ignoring instructions or customer locations
 
-   - Mean Absolute Error (MAE) / Root Mean Square Error (RMSE)
-   - Accuracy for delay-risk prediction
-   - Confusion matrix
-   - Baseline vs improved model comparison
+- Customer complaints
 
-## 📌 Expected Outcomes
+- Loss of repeat customers due to inconsistent delivery performance
 
-- A clean, reproducible ML pipeline for SME logistics
-- Accurate ETA predictions
-- Delay-risk classification models
-- Geospatial delivery visualizations
-- A dashboard SMEs can use to monitor delivery performance
-- Data-driven recommendations for dispatching and planning
-  
-## 🛠️ Technologies used
+Recently, my Amir made a statement that perfectly captured the problem:
 
-- Python
-- Pandas/NumPy
-- Scikit-learn
-- GeoPandas
-- Matplotlib / Folium / Plotly
-- OpenStreetMap APIs
-- Git / GitHub
-- Streamlit (for dashboard demo)
-  
-## 👥 Who This Project Helps  
+“Most Nigerian drivers are a menace to small-scale businesses.
+Without wisdom and extraordinary endurance, a manager can lose customers and watch the business collapse.”
 
-- Restaurants
-- Online sellers
-- Grocery stores
-- SMEs operating on platforms like Chowdeck, BoltFood, Uber Eats, Glovo, Jumia Food
-- Logistics startups serving e-commerce vendors
+This project is inspired by that lived reality.
 
-This system does not compete with these platforms — it empowers SMEs with analytics and
-insights to improve their delivery outcomes.
+Small businesses in emerging markets suffer from unpredictable human factors, limited infrastructure,
+and inefficient last-mile delivery processes.
 
-## Motivation
+This project attempts to address these issues through data-driven logistics intelligence.
 
-This project is inspired by my experience founding Tomori Foods, a food business I ran
-during my undergraduate years. Logistics was our biggest challenge — we dealt with rider
-shortages, traffic delays, and customer complaints.
+## 🧠 Problem Statement
 
-I always wished for a simple system that could:
+Small businesses in emerging markets rely heavily on riders/drivers for product delivery.
 
-    - predict delays
-    - assign riders efficiently
-    - plan routes automatically
-    - show a clear overview of delivery performance
+However:
 
-This project recreates those challenges through synthetic data and demonstrates how AI
-and data-driven tools can transform small-scale logistics in Nigeria.
+- Delivery times are highly unpredictable
 
-## 🧩 Features
+- Human behaviour introduces delays
 
-- **Route Optimization:**
-  
-  Suggests shorter or faster delivery paths.
+- Routing decisions are made without data
 
-- **Traffic Simulation:**
-  
-  Generates and updates realistic traffic data.
+- Customer satisfaction depends on the weakest link — the rider
 
-- **Dynamic Re-Routing:**
-  
-  Automatically recommends new routes when delays occur.
+- Managers lack tools to monitor performance or allocate riders efficiently
 
-- **Analytics Dashboard:**
-  
-  Visualizes delivery times, demand zones, and delay trends.  
+There is a need for a scalable, automated, predictive, and intelligent delivery management system.
 
----
+## 🎯 Project Objectives
+
+The project aims to:
+
+  1. Generate synthetic customer orders and delivery events
+
+  2. Predict demand zones and order surges
+
+  3. Estimate delivery times using ML models
+
+  4. Implement an intelligent rider assignment algorithm
+
+  5. Analyze operational KPIs (delays, peak hours, zone traffic)
+
+  6. Provide a foundation for a real-time dashboard
+
+  7. Document insights using MIT milestone workflows
 
 ## System Architecture
 
@@ -187,46 +90,170 @@ Below is the high-level architecture of the platform:
 
 ![Data Architecture](./assets/data_architecture.png)
 
-## Competitor Analysis
+## 🔍 Features
 
-Platforms like **Chowdeck** and **Bolt Food** excel at:
+✔ 1. **Synthetic Order Generation**
 
-    - High delivery volume
+Creates realistic customer orders with:
 
-    - 30-minute fulfillment
+- timestamps
 
-    - Vendor integrations
+- pickup and drop-off zones
 
-    - Dark-store efficiency
+- order type
 
-### How This Project Differs
+- simulated delivery conditions
+  
+✔ 2. **Demand Zone Prediction**
 
-    - ML-driven delay prediction
+- Identifies high-demand zones using:
 
-    - Real-time route optimization
+- clustering
 
-    - Demand forecasting for rider allocation
+- historical patterns
 
-    - Modular, affordable tools for SMEs
+- peak-hour analysis
 
-    - Insights without needing an in-house data team
+✔ 3. **Delivery Time Prediction (ML Model)**
 
- This project is not a delivery service — it is a data-driven optimization engine for SMEs.
+A machine learning model predicts:
 
- ---
+- expected delivery time
 
-## 🏁 Conclusion
+- risk of delay
 
-This project shows how SMEs in Nigeria can leverage data-driven intelligence to improve delivery
-operations without owning a logistics fleet. By combining synthetic datasets, geospatial mapping,
-predictive modelling, and route optimization, the system provides practical tools for forecasting
-delivery times, identifying risks, and improving dispatching efficiency.
+- zone-based arrival estimation
 
-Future enhancements will include real-time API integration, automated re-routing, cloud deployment,
-and live dashboards for SME operators.
+✔ 4. **Intelligent Rider Assignment**
 
-## 🙏 Acknowledgments
+- A rule-based (later ML-based) system that:
 
-Special thanks to my colleagues from Tomori Foods — Fola and Harun — whose teamwork and
-resilience inspired this project. Their support motivated me to explore innovative ways
-to help small businesses through data analytics, AI, and automation.
+- selects the optimal rider
+
+- balances workload
+
+- reduces overall delay
+
+- considers predicted travel time
+
+✔ 5. **KPI Analysis (Dashboard Coming Soon)**
+
+- Metrics include:
+
+- average delivery time
+
+- delay frequency
+
+- peak demand windows
+
+- rider utilization
+
+## 🧱  Tech Stack
+
+- Python
+
+- Pandas, NumPy
+
+- scikit-learn
+
+- OpenStreetMap (OSM) data
+
+- Matplotlib/Plotly
+
+- Jupyter Notebook
+
+- draw.io (architecture)
+
+## 🧪 How to Run the Project
+
+```bash
+git clone https://github.com/Ridwanayinde/Data-Driven-Last-Mile-Logistics-Optimization-for-Small-Businesses-in-Emerging-Markets.git
+
+cd Data-Driven-Last-Mile-Logistics-Optimization-for-Small-Businesses-in-Emerging-Markets
+
+pip install -r requirements.txt
+
+```
+
+Run data generation:
+
+```bash
+ python generate_orders.py
+```
+
+Train ML model:
+
+```bash
+
+python train_model.py
+```
+
+Run rider assignment:
+
+``` bash
+
+python assign_riders.py
+
+```
+
+📁 Project Structure
+
+```css
+
+├── data/
+├── notebooks/
+├── src/
+│  ├── generate_orders.py
+│   ├── preprocess.py
+│   ├── train_model.py
+│   ├── assign_riders.py
+├── diagrams/
+│   ├── system_architecture.drawio
+│   ├── data_architecture.drawio
+├── README.md
+└── retrospective.md (for MIT milestones)
+
+```
+
+## 📌 MIT Emerging Talent Workflow
+
+Milestone 1 (Problem Identification)
+
+- Motivation
+- Real-world problem
+- Business context
+
+Milestone 2 (Data Collection)
+
+- Synthetic orders
+- OSM data
+- Rider data
+
+Milestone 3 (Data Analysis)
+
+- ML predictions
+- Rider assignment
+- KPI evaluation
+
+Milestone 4 (Communicating Results)
+
+- Public artefact (infographic/video/blog)
+
+Milestone 5 (Final Presentation)
+
+- Slide deck or showcase
+- Retrospective reflections
+
+## 🔮 Future Work
+
+- Real-time dashboard with Streamlit
+
+- Geospatial routing (OSRM, Mapbox, or GraphHopper)
+
+- Neural network for delivery time prediction
+
+- Reinforcement learning for rider dispatching
+
+- Integration with mobile delivery apps
+
+- Multi-objective optimization (distance vs time vs cost)
